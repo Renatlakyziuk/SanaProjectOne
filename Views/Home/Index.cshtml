@@ -1,0 +1,17 @@
+﻿@model ProjectOne.Models.HomePageModel;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (Model != null && Model.Name != "")
+{
+    <h1 class="display-4">Hello, @Model.Name!</h1>
+}
+<div class="text-center">
+    <h1 class="display-4">Your name</h1>
+    <form method="post">
+        <input class="form-control" type="text" placeholder="Your name" asp-for="Name">
+        <input type="submit" class="mt-4 btn btn-primary" value="Submit">
+    </form>
+</div>
